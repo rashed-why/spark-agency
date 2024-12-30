@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Tilt+Warp&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body;
+}
+
+/* slider style */
+.slide-wrap {
+  .container {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .item {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 320px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .a {
+    transform: rotateY(0deg) translateZ(350px);
+  }
+  .b {
+    transform: rotateY(60deg) translateZ(350px);
+  }
+  .c {
+    transform: rotateY(120deg) translateZ(350px);
+  }
+  .d {
+    transform: rotateY(180deg) translateZ(350px);
+  }
+  .e {
+    transform: rotateY(240deg) translateZ(350px);
+  }
+  .f {
+    transform: rotateY(300deg) translateZ(350px);
+  }
+
+  @media (max-width: 850px) {
+    height: 300px !important;
+    margin-top: 70px;
+    .container {
+      width: 150px;
+    }
+    .item {
+      height: 250px;
+    }
+    .a {
+      transform: rotateY(0deg) translateZ(150px);
+    }
+    .b {
+      transform: rotateY(60deg) translateZ(150px);
+    }
+    .c {
+      transform: rotateY(120deg) translateZ(150px);
+    }
+    .d {
+      transform: rotateY(180deg) translateZ(150px);
+    }
+    .e {
+      transform: rotateY(240deg) translateZ(150px);
+    }
+    .f {
+      transform: rotateY(300deg) translateZ(150px);
+    }
+  }
+}
